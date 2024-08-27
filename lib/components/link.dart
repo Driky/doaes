@@ -1,15 +1,15 @@
-import 'package:jaspr/jaspr.dart';
+// import 'package:jaspr/jaspr.dart';
 
-class link extends StatelessComponent {
-  final String? href;
+// class link extends StatelessComponent {
+//   final String? href;
 
-  link({super.key, this.href});
+//   link({super.key, this.href});
 
-  bool get isInternalLink => href != null && href!.startsWith('/');
-  bool get isAnchorLink =>  href != null && href.startsWith('#');
+//   bool get isInternalLink => href != null && href!.startsWith('/');
+//   bool get isAnchorLink =>  href != null && href.startsWith('#');
 
-  @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield
-  }
-}
+//   @override
+//   Iterable<Component> build(BuildContext context) sync* {
+//     yield
+//   }
+// }
