@@ -2,6 +2,14 @@
 
 A new jaspr project.
 
+## Prerequisites
+
+Make sure you have the Jaspr CLI installer, if you don't use the following:
+
+```bash
+dart pub global activate jaspr_cli
+```
+
 ## Running the project
 
 Run your project using `jaspr serve`.
