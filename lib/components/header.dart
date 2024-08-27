@@ -15,6 +15,7 @@ class Header extends StatelessComponent {
         for (var route in [
           (label: 'Home', path: '/'),
           (label: 'About', path: '/about'),
+          (label: 'Post', path: '/post'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
             Link(to: route.path, child: text(route.label)),

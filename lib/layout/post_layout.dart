@@ -2,6 +2,7 @@ import 'package:doaes/components/missing_html_components.dart';
 import 'package:doaes/components/page_title.dart';
 import 'package:doaes/core/author.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:markdown/markdown.dart';
 
 class PostLayout extends StatelessComponent {
   final DateTime date;
@@ -9,11 +10,13 @@ class PostLayout extends StatelessComponent {
   final List<Author> authors;
   final List<Component> children;
   final List<String> tags;
+  final String content;
 
   PostLayout({
     super.key,
     required this.date,
     required this.title,
+    required this.content,
     this.authors = const [],
     this.children = const [],
     this.tags = const [],
@@ -123,7 +126,7 @@ class PostLayout extends StatelessComponent {
                   [
                     div(
                       classes: 'prose max-w-none pb-8 pt-10 dark:prose-invert',
-                      children,
+                     [RawText(markdownToHtml(content))],
                     ),
                     // Todo: put comments here
                   ],
@@ -145,7 +148,8 @@ class PostLayout extends StatelessComponent {
                               ),
                               div(
                                 classes: 'flex flex-wrap',
-                                [],
+                                [
+                                ],
                               )
                             ],
                           )
